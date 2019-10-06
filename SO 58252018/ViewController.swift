@@ -16,8 +16,8 @@ class ViewController: UIViewController, UITableViewDataSource {
   fileprivate var myData = [Class]() {
     didSet {
       // All UI related stuff must run on the main thread
-      DispatchQueue.main.async { [weak self] in
-        self?.table.reloadData()
+      DispatchQueue.main.async {
+        self.table.reloadData()
       }
     }
   }
